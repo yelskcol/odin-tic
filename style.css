@@ -1,6 +1,41 @@
+:root {
+  --grid-background-color: rgb(175, 175, 175);
+  --grid__cell-background-color: white;
+}
+
 html,
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: monospace;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.3rem;
+
+  /* Styling */
+  background-color: var(--grid-background-color);
+}
+
+.grid__cell {
+  background-color: var(--grid__cell-background-color);
+}
+
+.grid__cell--active {
+  cursor: pointer;
+}
+
+.grid__cell--inactive {
+  cursor: none;
 }
